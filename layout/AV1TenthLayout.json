@@ -1,0 +1,304 @@
+{
+  "configById": {
+    "Gauge!35wtpm": {
+      "path": "/battery_status.voltage",
+      "minValue": 9.6,
+      "maxValue": 12.6,
+      "colorMap": "red-yellow-green",
+      "colorMode": "colormap",
+      "gradient": [
+        "#ff0000",
+        "#00ff2b"
+      ],
+      "reverse": false
+    },
+    "Indicator!14sr5nx": {
+      "path": "/battery_status.voltage",
+      "style": "bulb",
+      "fallbackColor": "#0eff00",
+      "fallbackLabel": "BATTERY NOMINAL",
+      "rules": [
+        {
+          "operator": "<=",
+          "rawValue": "10.1",
+          "color": "#e34b59",
+          "label": "BATTERY IS DEAD"
+        }
+      ]
+    },
+    "Indicator!45wlba4": {
+      "path": "/gps.status.status",
+      "style": "bulb",
+      "fallbackColor": "#a0a0a0",
+      "fallbackLabel": "NO DATA",
+      "rules": [
+        {
+          "operator": "=",
+          "rawValue": "-1",
+          "color": "#ffbb00",
+          "label": "NO GPS FIX"
+        },
+        {
+          "operator": "=",
+          "rawValue": "0",
+          "color": "#0eff00",
+          "label": "GPS HAS FIX"
+        },
+        {
+          "operator": "=",
+          "rawValue": "-2",
+          "color": "#a0a0a0",
+          "label": "NO DATA"
+        }
+      ]
+    },
+    "Gauge!83q4j9": {
+      "path": "",
+      "minValue": 0,
+      "maxValue": 1,
+      "colorMap": "red-yellow-green",
+      "colorMode": "colormap",
+      "gradient": [
+        "#0000ff",
+        "#ff00ff"
+      ],
+      "reverse": false
+    },
+    "Indicator!3gk0p4u": {
+      "path": "/led_color.data",
+      "style": "bulb",
+      "fallbackColor": "#a0a0a0",
+      "fallbackLabel": "CAR STATE IS UNKNOWN",
+      "rules": [
+        {
+          "operator": "=",
+          "rawValue": "2",
+          "color": "#ffbb00",
+          "label": "CAR IS HOLDING"
+        },
+        {
+          "operator": "=",
+          "rawValue": "1",
+          "color": "#e34b59",
+          "label": "CAR IS UNSAFE"
+        },
+        {
+          "operator": "=",
+          "rawValue": "3",
+          "color": "#0eff00",
+          "label": "CAR IS SAFE"
+        }
+      ]
+    },
+    "SourceInfo!3uqb8fq": {},
+    "SourceInfo!16hi6zc": {},
+    "RawMessages!40hez72": {
+      "diffEnabled": false,
+      "diffMethod": "custom",
+      "diffTopicPath": "",
+      "showFullMessageForDiff": false,
+      "topicPath": "/led_color.data"
+    },
+    "3D!139f9ti": {
+      "cameraState": {
+        "perspective": false,
+        "distance": 77.52759057129529,
+        "phi": 0.00005729577951308232,
+        "thetaOffset": -0.6852024537619223,
+        "targetOffset": [
+          -14.440369857436545,
+          12.585723698281148,
+          -9.025321481677857e-22
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "fovy": 45,
+        "near": 4.213133473032022,
+        "far": 5000
+      },
+      "followMode": "follow-position",
+      "followTf": "utm_local",
+      "scene": {
+        "enableStats": false,
+        "syncCamera": false,
+        "ignoreColladaUpAxis": false,
+        "transforms": {
+          "axisScale": 12,
+          "lineWidth": 0.5,
+          "showLabel": false
+        },
+        "backgroundColor": "#7e7e7e"
+      },
+      "transforms": {
+        "frame:utm": {
+          "visible": true
+        },
+        "frame:vehicle": {
+          "visible": true
+        },
+        "frame:utm_local": {
+          "visible": true
+        }
+      },
+      "topics": {
+        "/goal_pose": {
+          "visible": true,
+          "type": "arrow"
+        },
+        "/initialpose": {
+          "visible": true
+        },
+        "/look_ahead_pose": {
+          "visible": true,
+          "type": "arrow",
+          "arrowScale": [
+            3.232842712474619,
+            0.5514983167209933,
+            0.42097551415019707
+          ]
+        },
+        "/route_pose_viz": {
+          "visible": true,
+          "color": "#ff8400"
+        },
+        "/vehicle_pose": {
+          "visible": true,
+          "axisScale": 2.5
+        },
+        "/rviz2/initialpose": {
+          "visible": true,
+          "type": "arrow",
+          "arrowScale": [
+            3.5,
+            2.15,
+            0.15
+          ],
+          "color": "#1e00ff"
+        },
+        "/rviz2/goal_pose": {
+          "visible": true,
+          "type": "arrow",
+          "arrowScale": [
+            8.5,
+            2.15,
+            1.15
+          ]
+        }
+      },
+      "layers": {},
+      "publish": {
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.26179939
+      }
+    },
+    "ROS2 Parameters.Custom Parameters Extenstion!4a2b0uz": {},
+    "Blank Panel.Blank!265emri": {
+      "showLogo": true
+    },
+    "Indicator!1seiv1j": {
+      "path": "/led_color.data",
+      "style": "bulb",
+      "fallbackColor": "#a0a0a0",
+      "fallbackLabel": "False",
+      "rules": [
+        {
+          "operator": "=",
+          "rawValue": "1",
+          "color": "#68e24a",
+          "label": "True"
+        }
+      ]
+    },
+    "Gauge!1cd9mm7": {
+      "path": "/odometry.twist.twist.linear.x",
+      "minValue": 0,
+      "maxValue": 6,
+      "colorMap": "red-yellow-green",
+      "colorMode": "colormap",
+      "gradient": [
+        "#0000ff",
+        "#ff00ff"
+      ],
+      "reverse": false
+    },
+    "Tab!2033py5": {
+      "activeTabIdx": 0,
+      "tabs": [
+        {
+          "title": "1",
+          "layout": {
+            "first": {
+              "first": "Gauge!35wtpm",
+              "second": {
+                "first": "Indicator!14sr5nx",
+                "second": "Indicator!45wlba4",
+                "direction": "column",
+                "splitPercentage": 46.94408322496747
+              },
+              "direction": "column"
+            },
+            "second": {
+              "first": "Gauge!83q4j9",
+              "second": "Indicator!3gk0p4u",
+              "direction": "column"
+            },
+            "direction": "row"
+          }
+        },
+        {
+          "title": "2",
+          "layout": {
+            "first": {
+              "first": "SourceInfo!3uqb8fq",
+              "second": "SourceInfo!16hi6zc",
+              "direction": "row"
+            },
+            "second": "RawMessages!40hez72",
+            "direction": "column"
+          }
+        },
+        {
+          "title": "3",
+          "layout": {
+            "first": "3D!139f9ti",
+            "second": {
+              "first": "ROS2 Parameters.Custom Parameters Extenstion!4a2b0uz",
+              "second": {
+                "first": {
+                  "first": "Blank Panel.Blank!265emri",
+                  "second": "Indicator!1seiv1j",
+                  "direction": "column"
+                },
+                "second": "Gauge!1cd9mm7",
+                "direction": "column"
+              },
+              "direction": "column"
+            },
+            "direction": "row",
+            "splitPercentage": 81.64794007490637
+          }
+        }
+      ]
+    }
+  },
+  "globalVariables": {},
+  "userNodes": {},
+  "playbackConfig": {
+    "speed": 1
+  },
+  "layout": "Tab!2033py5"
+}
